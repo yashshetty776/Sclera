@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An overview of core internet protocols, network architecture and protocol stack.">
+    <meta property="og:title" content="Technical Foundations of the Internet">
+    <meta property="og:description" content="An HTML document explaining internet protocols.">
+    <title>Task 1</title>
+</head>
+<body id="top">
+    <header>
+        <h1>Technical Foundations of the Internet</h1>
+        <p>This guide explores the underlying protocols, architectural components, and technical concepts that enable the global network of networks to function reliably.</p>
+    </header>
+    <hr>
+    <nav id="content">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#core">Core Network Protocols</a></li>
+            <li><a href="#form">Network Configuration Inquiry</a></li>
+            <li><a href="#media">Infrastructure visualization</a></li>
+            <li><a href="#table">Protocol Stack Comparison</a></li>
+        </ol>
+    </nav>
+    <hr>
+    <section id="core">
+        <h2>Core Network Protocols</h2>
+        <p>The Internet relies on a suite of communication protocols, primarily the Internet Protocol Suite (TCP/IP), to ensure data integrity and routing across diverse hardware.</p>
+        <p>Data transmission involves <strong>packet switching</strong> (breaking data into small chunks) and <em>routing</em> (finding the best path through nodes). Modern web browsing is facilitated by <u>HTTP/HTTPS</u>, which sits atop the transport layer.</p>
+        <h3>The Client-Server Model</h3>
+        <p>Most internet interactions follow a request-response pattern. Below are key components of the architectural hierarchy:</p>
+        <ul>
+            <li>Application Layer (HTTP, FTP, SMTP)</li>
+            <li>
+                Transport Layer (TCP, UDP)
+                <ul>
+                    <li>TCP ensures reliable delivery via handshakes.</li>
+                </ul>
+            </li>
+        </ul>
+        <blockquote>
+            "The Internet is a network of networks... its design is based on the idea of an open architecture where no single entity controls the whole."
+            <cite>— Vint Cerf</cite>
+        </blockquote>
+        <p>A basic HTTP GET request header can be displayed as formatted code using the <code>&lt;header&gt;</code> tag, or shown in its raw form using the <code>&lt;pre&gt;</code> tag:</p>
+<pre>GET /index.html HTTP/1.1
+Host: www.example.org
+Connection: keep-alive
+Accept: text/html
+User-Agent: Mozilla/5.0</pre>
+    </section>
+    <hr>
+    <section id="form">
+        <h2>Network Configuration Inquiry</h2>
+        <p>Use this technical form to simulate a query for local network configuration and protocol preferences.</p>
+        <form action="/submit" method="post">
+            <fieldset>
+                <legend>Network Node Details</legend>
+                <p>
+                    <label for="name">Node Hostname:</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="e.g. edge-server-01" required>
+                </p>
+                <p>
+                    <label for="dt">Last System Update:</label>
+                    <br>
+                    <input type="date" id="dt" name="dt" >
+                </p>
+                <p>
+                    <label for="protocol">Primary Transport Protocol:</label>
+                    <br>
+                    <input type="radio" id="tcp" name="transport" value="tcp">
+                    <label for="tcp">TCP (Reliable)</label>
+                    <input type="radio" id="udp" name="transport" value="udp">
+                    <label for="udp">UDP (Speed)</label>
+                </p>
+                <p>
+                    <label for="role">Network Topology</label>
+                    <br>
+                    <select name="role" id="role">
+                        <option value="star">Star Topology</option>
+                        <option value="mesh">Mesh Topology</option>
+                        <option value="hybrid">Hybrid/Cloud</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms"> I verify that the encryption keys are validated</label>
+                </p>
+                <p>
+                    <button type="reset">Clear Buffer</button>
+                    <button type="submit">Send Request</button>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+    <hr>
+    <section id="media">
+        <h2>Infrastructure Visualization</h2>
+        <p>Visual aids representing the physical and logical layers of global connectivity.</p>
+        <h3>Data Center Architecture</h3>
+        <figure>
+            <img src="https://engineering.fb.com/wp-content/uploads/2018/05/data-center-shot.jpg?w=640" alt="High-Density Server Rack" loading="lazy" width="400">
+            <figcaption>
+            <em>Figure 1: Schematic representation of a high-density server rack within a Tier 4 data center.</em>
+            </figcaption>
+        </figure>
+
+        <h3>Network Latency Simulation</h3>
+        <div class="video">
+            <video controls width="400" aria-label="Network latency simulation video">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            The browser does not support the video tag.
+            </video>
+            <p>
+            The &lt;video&gt; element demonstrates how streaming protocols manage buffering and bitrate adaptation.
+            </p>
+        </div>
+
+        <h3>Protocol Audio Signal</h3>
+        <div class="audio">
+            <audio controls aria-label="Protocol audio signal sample">
+            <source src="https://media.geeksforgeeks.org/wp-content/uploads/20241009180552641558/sample-12s.mp3" type="audio/mpeg">
+            The browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    <hr>
+    <section id="table">
+        <h2>Protocol Stack Comparison</h2>
+        <table border="1">
+            <caption>OSI vs TCP/IP Mapping</caption>
+            <thead>
+                <tr>
+                    <th>OSI Layer</th>
+                    <th>TCP/IP Layer</th>
+                    <th>Common Protocols</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Application</td>
+                    <td>Application</td>
+                    <td>HTTP, DNS, SSH</td>
+                </tr>
+                <tr>
+                    <td>Transport</td>
+                    <td>Transport</td>
+                    <td>TCP, UDP</td>
+                </tr>
+                <tr>
+                    <td>Network</td>
+                    <td>Internet</td>
+                    <td>IP, ICMP, ARP</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+    <footer>
+        <p>&copy; 2024 Internet Engineering Task Force Documentation Archive.</p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+</body>
+</html>
