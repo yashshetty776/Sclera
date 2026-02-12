@@ -7,36 +7,42 @@
     <meta property="og:title" content="A Brief History of the Internet">
     <meta property="og:description" content="An HTML document explaining internet history.">
     <title>History of the Internet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&family=Inter:wght@400;700&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body id="top">
     <nav class="side-nav" aria-label="Page Tracker">
-        <a href="#top" title="Top"><span class="visually-hidden">Top of the page</span></a>
-        <a href="#toc" title="Contents"><span class="visually-hidden">Table of Contents</span></a>
-        <a href="#foundations" title="Foundations"><span class="visually-hidden">Foundations</span></a>
-        <a href="#packet-switching" title="packet-switching"><span class="visually-hidden">Packet Switching</span></a>
-        <a href="#browser-wars" title="Browser Wars"><span class="visually-hidden">Browser Wars</span></a>
-        <a href="#mobile-revolution" title="Mobile Revolution"><span class="visually-hidden">Mobile Revolution</span></a>
-        <a href="#web2" title="Web 2.0"><span class="visually-hidden">Web 2.0</span></a>
-        <a href="#media" title="Visuals"><span class="visually-hidden">Visual History Archive</span></a>
-        <a href="#tables" title="Timeline"><span class="visually-hidden">Protocol Evolution Timeline</span></a>
+        <a href="#top" title="Top"></a>
+        <a href="#toc" title="Contents"></a>
+        <a href="#foundations" title="Foundations"></a>
+        <a href="#packet-switching" title="packet-switching"></a>
+        <a href="#browser-wars" title="Browser Wars"></a>
+        <a href="#mobile-revolution" title="Mobile Revolution"></a>
+        <a href="#web2" title="Web 2.0"></a>
+        <a href="#media" title="Visuals"></a>
+        <a href="#tables" title="Timeline"></a>
     </nav>
 
-    <header>
-        <span>Archive of Digital Evolution</span>
+    <header class="hero">
+        <span class="tag">Archive of Digital Evolution</span>
         <h1>Internet History</h1>
         <p>A high-fidelity exploration into the origins, rivalries, and architecture of the global network.</p>
     </header>
+
     <main id="main">
-        <nav id="toc">
-            <h2>Table of Contents</h2>
-            <ol>
-                <li><a href="#foundations">Foundations and Milestones</a></li>
-                <li><a href="#packet-switching">The Packet Switching Revolution</a></li>
-                <li><a href="#browser-wars">The Browser Wars &amp; Standards</a></li>
-                <li><a href="#mobile-revolution">Mobile Web Revolution</a></li>
-                <li><a href="#web2">Web 2.0 and Beyond</a></li>
-                <li><a href="#media">Visual History Archive</a></li>
-                <li><a href="#tables">Protocol Evolution Matrix</a></li>
+        <nav id="toc" class="toc-card">
+            <h2 class="toc-header"><i data-lucide="book-open"></i> Table of Contents</h2>
+            <ol class="toc-list">
+                <li><a href="#foundations"><i data-lucide="landmark" class="toc-icon"></i>01. Foundations and Milestones</a></li>
+                <li><a href="#packet-switching"><i data-lucide="network" class="toc-icon"></i>02. The Packet Switching Revolution</a></li>
+                <li><a href="#browser-wars"><i data-lucide="globe" class="toc-icon"></i>03. The Browser Wars & Standards</a></li>
+                <li><a href="#mobile-revolution"><i data-lucide="smartphone" class="toc-icon"></i>04. Mobile Web Revolution</a></li>
+                <li><a href="#web2"><i data-lucide="zap" class="toc-icon"></i>05. Web 2.0 and Beyond</a></li>
+                <li><a href="#media"><i data-lucide="image" class="toc-icon"></i>06. Visual History Archive</a></li>
+                <li><a href="#tables"><i data-lucide="table" class="toc-icon"></i>07. Protocol Evolution Matrix</a></li>
             </ol>
         </nav>
 
@@ -277,6 +283,8 @@
             </nav>
         </section>
     </footer>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
