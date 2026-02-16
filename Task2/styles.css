@@ -1,6 +1,6 @@
 :root {
     --bg-primary: #060B10;
-    --surface-card: rgba(255, 255, 255, 0.03);
+    --surface-card: rgba(255, 255, 255, 0.05);
     --accent-cyan: #00D2FF;
     --accent-gold: #FFD700;
     --text-primary: #FFFFFF;
@@ -45,7 +45,6 @@ strong {
 }
 
 .hero .tag {
-    display: block;
     color: var(--accent-cyan);
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -128,7 +127,6 @@ strong {
 }
 
 .toc-card {
-    padding: 2rem 2.5rem;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -453,7 +451,7 @@ blockquote p {
 .mobile-content h4 {
     font-family: var(--font-heading);
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
@@ -542,7 +540,7 @@ blockquote p {
 .logical-img img {
     width: 100%;
     height: 75vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .logical-img figcaption {
@@ -585,11 +583,8 @@ blockquote p {
 
 video:hover {
     cursor: pointer;
-    box-shadow: var(--accent-cyan);
-}
-
-.audio-content audio:hover {
-    color: var(--accent-cyan);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+    transform: translateY(5px);
 }
 
 /* Table Section */
@@ -709,7 +704,7 @@ footer ul {
 }
 
 .social-links a:hover {
-    background: var(--bg-primary);
+    background: var(--surface-card);
     box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
 }
 
@@ -791,22 +786,6 @@ footer button:hover {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-}
-
-
-.footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border-light);
-    max-width: 1000px;
-    margin: 0 auto;
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    opacity: 0.8;
 }
 
 .footer-bottom nav ul {
