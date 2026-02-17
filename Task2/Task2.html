@@ -29,7 +29,7 @@
     <header class="hero">
         <span class="tag">Archive of Digital Evolution</span>
         <h1>Internet History</h1>
-        <p>A high-fidelity exploration into the origins, rivalries, and architecture of the global network.</p>
+        <p class="hero-desc">A high-fidelity exploration into the origins, rivalries, and architecture of the global network.</p>
     </header>
 
     <main id="main">
@@ -71,16 +71,16 @@
                 </article>
             </div>
 
-            <article class="foundation-desc">
-                <p>The journey of the internet began in the late 1960s with the creation of <strong>ARPANET</strong>, funded by the U.S. Department of Defense. It was the first network to implement the protocol suite TCP/IP, laying the groundwork for everything we see today.</p>
+            <article>
+                <p class="foundation-desc">The journey of the internet began in the late 1960s with the creation of <strong>ARPANET</strong>, funded by the U.S. Department of Defense. It was the first network to implement the protocol suite TCP/IP, laying the groundwork for everything we see today.</p>
                 <aside class="fact">
                     <i data-lucide="lightbulb" class="fact-icon"></i>
                     <div class="fact-content">
                         <h4>Did You Know?</h4>
-                        <p>The very first message sent over ARPANET was "LO". The system crashed as Charley Kline tried to type "LOGIN" to the SRI computer from UCLA.</p>
+                        <p class="fact-desc">The very first message sent over ARPANET was "LO". The system crashed as Charley Kline tried to type "LOGIN" to the SRI computer from UCLA.</p>
                     </div>
                 </aside>
-                <p>This early network demonstrated that <strong class="imp-text">packet switching</strong> was more efficient than traditional circuit switching. It emphasized decentralized communication, ensuring that the network could survive even if parts of it were destroyed.</p>
+                <p class="foundation-desc">This early network demonstrated that <strong class="imp-text">packet switching</strong> was more efficient than traditional circuit switching. It emphasized decentralized communication, ensuring that the network could survive even if parts of it were destroyed.</p>
             </article>
         </section>
 
@@ -92,8 +92,8 @@
                     <i data-lucide="waypoints" class="section-icon"></i>
                     <h2>Packet Switching</h2>
                 </div>
-                <p>In the early 1960s, independent of each other, <strong>Paul Baran</strong> in the US and Donald Davies in the UK developed the concept of distributed communications. Baran's work at the RAND Corporation envisioned a network that could survive a nuclear strike.</p>
-                <p> Rather than a centralized exchange, Baran proposed breaking messages into small "blocks" (later called packets). This was radical: it meant no single point of failure and higher utilization of existing lines.</p>
+                <p class="packet-desc">In the early 1960s, independent of each other, <strong>Paul Baran</strong> in the US and Donald Davies in the UK developed the concept of distributed communications. Baran's work at the RAND Corporation envisioned a network that could survive a nuclear strike.</p>
+                <p class="packet-desc"> Rather than a centralized exchange, Baran proposed breaking messages into small "blocks" (later called packets). This was radical: it meant no single point of failure and higher utilization of existing lines.</p>
             </article>
             <figure class="packet-fig">
                 <svg class="w-full h-auto" viewBox="0 0 400 300">
@@ -134,15 +134,15 @@
                     <i data-lucide="swords" class="section-icon"></i>
                     <h2>The Browser Wars</h2>
                 </div>
-                <p>The mid-90s saw a fierce competition for dominance over how people accessed the web. <strong>Netscape Navigator</strong>, the early leader, faced a massive threat when Microsoft began bundling <strong>Internet Explorer</strong> with Windows.</p>
-                <p>This "war" wasn't just about market share; it drove the rapid development of web standards. Features we take for granted today—like cookies, JavaScript, and CSS—were often weaponized or rushed to gain a competitive edge.</p>
+                <p class="browser-desc">The mid-90s saw a fierce competition for dominance over how people accessed the web. <strong>Netscape Navigator</strong>, the early leader, faced a massive threat when Microsoft began bundling <strong>Internet Explorer</strong> with Windows.</p>
+                <p class="browser-desc">This "war" wasn't just about market share; it drove the rapid development of web standards. Features we take for granted today—like cookies, JavaScript, and CSS—were often weaponized or rushed to gain a competitive edge.</p>
                 <blockquote class="glass-card">
                     "We are going to cut off their air supply. Everything they're selling, we're going to give away for free." <cite>— Microsoft Executive on Netscape</cite>
                 </blockquote>
             </article>
             <figure class="legacy-fig glass-card">
                 <div class="legacy-header">
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="legacy-dot"></span><span class="legacy-dot"></span><span class="legacy-dot"></span>
                 </div>
                 <div class="legacy-body">
                     <i data-lucide="globe"></i>
@@ -182,8 +182,8 @@
                 </figure>
 
                 <article class="mobile-article">
-                    <p>The introduction of the <strong>iPhone in 2007</strong> and the subsequent rollout of <strong>4G networks</strong> fundamentally changed the Internet's traffic patterns. For the first time, users expected a desktop-class experience on a 3.5-inch screen.</p>
-                    <p>This shift led to the "Mobile First" design philosophy. It wasn't just about screen size; it was about context. Location-based services (GPS) and persistent connectivity birthed the App Economy.</p>
+                    <p class="mobile-desc">The introduction of the <strong>iPhone in 2007</strong> and the subsequent rollout of <strong>4G networks</strong> fundamentally changed the Internet's traffic patterns. For the first time, users expected a desktop-class experience on a 3.5-inch screen.</p>
+                    <p class="mobile-desc">This shift led to the "Mobile First" design philosophy. It wasn't just about screen size; it was about context. Location-based services (GPS) and persistent connectivity birthed the App Economy.</p>
                 </article>
             </div>
 
@@ -192,8 +192,8 @@
                     <i data-lucide="maximize" class="section-icon"></i>
                     <h3>The Rise of Responsive Design</h3>
                 </div>
-                <p>In 2010, <strong>Ethan Marcotte</strong> published a seminal article titled "Responsive Web Design." Before this, companies often maintained separate "m.sites"—entirely different websites for mobile users that were difficult to sync and maintain.</p>
-                <p>Marcotte’s approach utilized fluid grids, flexible images, and media queries to create a unified codebase that adapted to any screen. This shift ended the era of device-specific forks and paved the way for the modern, accessible web we use today.</p>
+                <p class="responsive-desc">In 2010, <strong>Ethan Marcotte</strong> published a seminal article titled "Responsive Web Design." Before this, companies often maintained separate "m.sites"—entirely different websites for mobile users that were difficult to sync and maintain.</p>
+                <p class="responsive-desc">Marcotte’s approach utilized fluid grids, flexible images, and media queries to create a unified codebase that adapted to any screen. This shift ended the era of device-specific forks and paved the way for the modern, accessible web we use today.</p>
             </article>
         </section>
 
@@ -206,8 +206,8 @@
             </div>
             <div class="web2-grid">
                 <article class="web2-left">
-                    <p>The early 2000s marked the transition from "Web 1.0"—a collection of static read-only pages— to <strong>Web 2.0</strong>, defined by interactivity and user-generated content. This wasn't a technical upgrade of the internet itself, but a shift in how it was used.</p>
-                    <p>Technologies like AJAX (Asynchronous JavaScript and XML) allowed pages to update without refreshing, enabling the rise of rich web applications and SaaS (Software as a Service). Suddenly, the browser became a platform for complex tools, not just a document viewer.</p>
+                    <p class="web2-desc">The early 2000s marked the transition from "Web 1.0"—a collection of static read-only pages— to <strong>Web 2.0</strong>, defined by interactivity and user-generated content. This wasn't a technical upgrade of the internet itself, but a shift in how it was used.</p>
+                    <p class="web2-desc">Technologies like AJAX (Asynchronous JavaScript and XML) allowed pages to update without refreshing, enabling the rise of rich web applications and SaaS (Software as a Service). Suddenly, the browser became a platform for complex tools, not just a document viewer.</p>
                 </article>
 
                 <article class="web2-right">
@@ -251,7 +251,7 @@
                 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                 The browser does not support the video tag.
                 </video>
-                <p>Restored footage from 1990 demonstrating the first browser navigation by Tim Berners-Lee.</p>
+                <p class="video-desc">Restored footage from 1990 demonstrating the first browser navigation by Tim Berners-Lee.</p>
             </div>
 
             <div class="audio">
@@ -343,7 +343,7 @@
         <div class="footer-top">
         <section>
             <h3>Internet History Archive</h3>
-            <p>Preserving the legacy of the networks that unified the world. An open, high-fidelity educational resource for future digital historians.</p>
+            <p class="footer-desc">Preserving the legacy of the networks that unified the world. An open, high-fidelity educational resource for future digital historians.</p>
 
             <nav class="social-links">
             <ul>
