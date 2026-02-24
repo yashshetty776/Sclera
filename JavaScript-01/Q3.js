@@ -8,9 +8,7 @@ const doubled = arr.map(num => num*2);
 
 const filtered = arr.filter(num => num>15);
 
-const sum = arr.reduce((acc,curr) => {
-    return acc+curr;
-},0);
+const sum = arr.reduce((acc,curr) => acc+curr, 0);
 
 const greaterThan3 = arr.every(num => num > 3);
 

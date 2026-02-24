@@ -3,7 +3,7 @@
 
 const printPattern = (n) => {
   let output = "";
-  if(n < 1) return "Invalid Output";
+  if(n < 1) return "Invalid Input";
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= i; j++) {
       output += j;
@@ -13,5 +13,5 @@ const printPattern = (n) => {
   return output;
 };
 
-let pattern = printPattern(5);
+const pattern = printPattern(5);
 console.log(pattern);
