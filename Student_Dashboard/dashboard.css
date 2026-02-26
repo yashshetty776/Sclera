@@ -1,0 +1,319 @@
+:root {
+  --bg-global: #0f1115;
+  --bg-card: #1a1d24;
+  --border-color: #2a2f3a;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --primary-color: #3b82f6;
+  --pass-color: #22c55e;
+  --fail-color: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-global);
+    font-family: 'Inter', 'Segoe UI', 'system-ui', 'sans-serif';
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.header {
+    background-color: var(--bg-card);
+    display: flex;
+    gap: 0.75rem;
+    position: sticky;
+    align-items: center;
+    padding: 0 2rem;
+    height: 4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-icon {
+    background-color: var(--primary-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.main {
+    max-width: 1400px;
+    padding: 2rem;
+    margin: auto;   
+}
+
+.form {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+.form-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.input-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.data-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.percent-input,
+ .btn-submit {
+    flex: 0.5;
+}
+
+.input-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.data-input input,
+.data-input select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    background-color: var(--bg-global);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.data-input input:focus, 
+.data-input select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.dept-selection {
+    color: var(--text-secondary);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: royalblue;
+}
+
+#search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.search-icon {
+    position: absolute;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.search-input {
+    background-color: var(--bg-card);
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.search-input:focus{
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.table-container { 
+    height: 500px; 
+    overflow-y: auto; 
+     margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    background-color: var(--bg-card);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-collapse: collapse;
+}
+
+thead th {  
+    text-align: left;
+    padding: 1rem 1.5rem; 
+    color: var(--text-secondary); 
+    border-bottom: 1px solid var(--border-color); 
+    background-color: var(--bg-global); 
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+}
+
+.right-text {
+    text-align: right;
+}
+
+tbody td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.student-icon {
+    background-color: #2a2f3a;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 10rem;
+    font-weight: 700;
+}
+
+.student-name {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.student-joined,
+.student-course {
+    color: var(--text-secondary);
+    font-size: 0.75rem; 
+}
+
+.percent-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.student-id {
+    color: var(--primary-color);
+}
+
+.status-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.result {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.result.pass {
+    color: var(--pass-color);
+    border-color: var(--pass-color);
+}
+
+.result.fail {
+    color: var(--fail-color);
+    border-color: var(--fail-color);
+}
+
+.btn-delete {
+    padding: 0.5rem;
+    background-color: var(--bg-card);
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    color: red;
+}
+
+.footer {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 0 1rem;
+  }
+
+  .input-form {
+    flex-direction: column;  
+    gap: 1rem;
+  }
+
+  .data-input,
+    .percent-input,
+    .btn-submit {
+    flex: unset;
+    width: 100%;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .student-name {
+    font-size: 1rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 800px;
+  }
+}

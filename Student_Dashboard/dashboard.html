@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A student management system dashboard to store student data">
+    <meta property="og:title" content="Student Management Dashboard">
+    <meta property="og:description" content="A comprehensive dashboard to add and remove student details.">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+    <title>Student Dashboard</title>
+</head>
+<body id="top">
+    <header class="header">
+        <i data-lucide="graduation-cap" class="header-icon"></i>
+        <h1 class="header-title">Student Management System</h1>
+    </header>
+
+    <main class="main">
+        <section id="form" class="form">
+            <h2 class="form-heading">Register New Student</h2>
+            <form class="input-form" id="studentForm">
+                <div class="data-input">
+                    <label for="name" class="input-label">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="data-input">
+                    <label for="sId" class="input-label">Student ID</label>
+                    <input type="text" id="sId" name="sID" placeholder="STU-2024-001" required>
+                </div>
+                <div class="data-input">
+                    <label for="dept" class="input-label">Department</label>
+                    <select name="dept" id="dept" class="dept-selection">
+                        <option value="CSE">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="SE">Software Engineering</option>
+                        <option value="DS">Data Science</option>
+                    </select>
+                </div>
+                <div class="data-input percent-input">
+                    <label for="percent" class="input-label">Percentage (%)</label>
+                    <input type="number" id="percent" name="percent" min="0" max="100" step="1" placeholder="0-100" required>
+                </div>
+                <button type="submit" class="btn-submit">+ Add Student</button>
+            </form>
+        </section>
+
+        <section id="search">
+            <div class="search-icon">
+                <i data-lucide="search"></i>
+            </div>
+            <input type="text" class="search-input" placeholder="Search student by name, ID or department...">
+        </section>
+        
+        <section id="table" class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Info</th>
+                        <th>Identity &amp; Department</th>
+                        <th>Percentage</th>
+                        <th class="right-text">Status &amp; Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentBody">
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-icon">JC</div>
+                                <div>
+                                    <div class="student-name">Jane Cooper</div>
+                                    <div class="student-joined">Joined: Oct 12, 2023</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="student-id">STU-2023-089</div>
+                            <div class="student-course">Computer Science</div>
+                        </td>
+                        <td>
+                            <div class="percent-info">
+                                <div>85%</div>
+                                <div class="progress-bar"></div>
+                            </div>
+                        </td>
+                        <td class="right-text">
+                            <div class="status-info">
+                                <span class="result">PASS</span>
+                                <button class="btn-delete">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer_content">&copy; 2024 Student Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
