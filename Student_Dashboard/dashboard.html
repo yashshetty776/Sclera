@@ -32,10 +32,10 @@
                 <div class="data-input">
                     <label for="dept" class="input-label">Department</label>
                     <select name="dept" id="dept" class="dept-selection">
-                        <option value="CSE">Computer Science</option>
-                        <option value="IT">Information Technology</option>
-                        <option value="SE">Software Engineering</option>
-                        <option value="DS">Data Science</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Data Science">Data Science</option>
                     </select>
                 </div>
                 <div class="data-input percent-input">
@@ -44,9 +44,10 @@
                 </div>
                 <button type="submit" class="btn-submit">+ Add Student</button>
             </form>
+            <p class="validation-msg"></p>
         </section>
 
-        <section id="search">
+        <section id="search" class="search-section">
             <div class="search-icon">
                 <i data-lucide="search"></i>
             </div>
@@ -54,47 +55,22 @@
         </section>
         
         <section id="table" class="table-container">
-            <table>
-                <thead>
+            <table class="student-table">
+                <thead class="student-table-header">
                     <tr>
                         <th>Student Info</th>
                         <th>Identity &amp; Department</th>
                         <th>Percentage</th>
-                        <th class="right-text">Status &amp; Actions</th>
+                        <th class="status-text">Status &amp; Actions</th>
                     </tr>
                 </thead>
-                <tbody id="studentBody">
-                    <tr>
-                        <td>
-                            <div class="student-info">
-                                <div class="student-icon">JC</div>
-                                <div>
-                                    <div class="student-name">Jane Cooper</div>
-                                    <div class="student-joined">Joined: Oct 12, 2023</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="student-id">STU-2023-089</div>
-                            <div class="student-course">Computer Science</div>
-                        </td>
-                        <td>
-                            <div class="percent-info">
-                                <div>85%</div>
-                                <div class="progress-bar"></div>
-                            </div>
-                        </td>
-                        <td class="right-text">
-                            <div class="status-info">
-                                <span class="result">PASS</span>
-                                <button class="btn-delete">
-                                    <i data-lucide="trash-2"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
+                <tbody id="studentBody" class="student-table-body">
                 </tbody>
-                <tfoot></tfoot>
+                <tfoot class="table-footer">
+                    <tr>
+                        <td colspan="4" class="studentCount">Showing 0 of 0 students</td>
+                    </tr>
+                </tfoot>
             </table>
         </section>
     </main>
