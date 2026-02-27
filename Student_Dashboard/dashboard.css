@@ -179,17 +179,16 @@ body {
 .student-table {
     width: 100%;
     background-color: var(--bg-card);
-    border-radius: 0.5rem;
+    border-collapse: separate; 
+    border-spacing: 0;
     border: 1px solid var(--border-color);
-    border-collapse: collapse;
 }
 
 .student-table-header th {  
     text-align: left;
     padding: 1rem 1.5rem; 
     color: var(--text-secondary); 
-    border-bottom: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color); 
+    border-bottom: 1px solid var(--border-color); 
     background-color: var(--bg-global); 
     font-size: 0.75rem;
     font-weight: 700;
@@ -205,6 +204,7 @@ body {
 .student-table-body td {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--border-color); 
+    
 }
 
 .student-table-body tr:hover {
@@ -317,13 +317,15 @@ body {
 }
 
 .table-footer {
-    text-align: center; 
+    position: sticky;
+    bottom: 0;
     color: var(--text-secondary); 
-    border-bottom: 1px solid var(--border-color); 
     background-color: var(--bg-global); 
 }
 
 .studentCount {
+    text-align: center; 
+    border-top: 1px solid var(--border-color);
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.5rem;

@@ -13,9 +13,12 @@ form.addEventListener('submit', (e) => {
 
     const name = document.querySelector('#name').value.trim();
     const id = document.querySelector('#sId').value.trim();
+    dept = document.querySelector('#dept').value;
+    percent = document.querySelector('#percent').value;
 
     const nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
     const idRegex = /^STU-\d{4}-\d{3}$/;
+    const existingStudents = JSON.parse(localStorage.getItem('students') || '[]');
 
     if (!nameRegex.test(name) || name.length < 3) {
         validation_msg.textContent = "Name must include alphabets only and must be greater than 3 characters.";
@@ -27,13 +30,18 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
+    if (existingStudents.some(s => s.id === id)) {
+        validation_msg.textContent = "This Student ID already exists. Retry!!!";
+        return;
+    }
+
     validation_msg.textContent = "";
 
     const student = {
-        name: document.querySelector('#name').value.trim(),
-        id: document.querySelector('#sId').value.trim(),
-        dept: document.querySelector('#dept').value,
-        percent: document.querySelector('#percent').value,
+        name,
+        id,
+        dept,
+        percent,
         joinedDate: getDate()
     };
 
@@ -135,9 +143,8 @@ function getDate() {
 }
 
 function updateCounter() {
-    const allRows = Array.from(tableBody.querySelectorAll('tr'));
-    const total = allRows.length;
     const rows = Array.from(tableBody.querySelectorAll('tr'));
+    const total = rows.length;
     const visible = rows.filter(row => row.style.display !== 'none').length;
     
     const counter = document.querySelector('.studentCount');
