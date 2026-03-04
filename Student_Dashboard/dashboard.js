@@ -13,8 +13,8 @@ form.addEventListener('submit', (e) => {
 
     const name = document.querySelector('#name').value.trim();
     const id = document.querySelector('#sId').value.trim();
-    dept = document.querySelector('#dept').value;
-    percent = document.querySelector('#percent').value;
+    const dept = document.querySelector('#dept').value;
+    const percent = document.querySelector('#percent').value;
 
     const nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
     const idRegex = /^STU-\d{4}-\d{3}$/;
