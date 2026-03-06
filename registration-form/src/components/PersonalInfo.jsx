@@ -29,30 +29,34 @@ const PersonalInfo = ({formData, handleChange, nextStep}) => {
   }
 
   return (
-    <>
-      <h1>Personal Information</h1>
-      <form>
-        <label>Name:</label>
+    <div className="w-2xl mx-auto mt-10 p-6 text-white bg-neutral-900 rounded-lg shadow-lg">
+      <h1 className="text-4xl font-bold text-center">Personal Information</h1>
+      <p className="mt-1 text-center text-green-500">Step 1</p>
+      <form className="flex flex-col gap-4">
+        <label className="text-xl font-medium mt-2">Full Name:</label>
         <input
         type="text"
         name="name"
         placeholder="Yash Shetty"
         value={formData.name}
         onChange={handleChange}
+        className="w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-sm focus:ring-2 focus:ring-blue-500"
         />
 
-        <label>Email:</label>
+        <label className="text-xl font-medium mt-2">Email:</label>
         <input
         type="email"
         name="email"
         placeholder="abc@gmail.com"
         value={formData.email}
         onChange={handleChange}
+        className="w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-sm focus:ring-2 focus:ring-blue-500"
         />
-        <button type="button" onClick={validateFunction}>Next</button>
+        <button className="w-full mt-4 bg-indigo-500 hover:bg-indigo-600 p-2 rounded-lg font-bold text-xl transition-all duration-200" 
+        type="button" onClick={validateFunction}>Next</button>
       </form>
-      {error && <p>{error}</p>}
-    </>
+      {error && <p className="mt-2 text-red-500">{error}</p>}
+    </div>
   )
 }
 

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import PersonalInfo from "./PersonalInfo";
 import AccountDetails from "./AccountDetails";
 import Review from "./Review";
+import Submitting from "./Submitting";
+import Success from "./Success";
 
 const Form = () => {
 
@@ -39,8 +41,8 @@ const prevStep = () => setStep(prev => prev - 1);
 
 const handleSubmit = () => setSubmitting(true);
 
-if (submitting) return <h1>Submitting...</h1>
-if (success) return <h1>Registration Successful</h1>
+if (submitting) return <Submitting />
+if (success) return <Success />
   
   return (
     <>
